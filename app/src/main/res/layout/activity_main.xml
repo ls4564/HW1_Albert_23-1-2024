@@ -92,6 +92,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="60dp"
         android:ems="5"
+        android:hint="Enter Number"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv2" />
@@ -102,6 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:ems="5"
+        android:hint="Enter Number"
         android:inputType="number"
         android:visibility="invisible"
         app:layout_constraintEnd_toStartOf="@+id/ed3"
@@ -117,6 +119,7 @@
         android:cursorVisible="false"
         android:ems="5"
         android:inputType="number"
+        android:onClick="third"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv6" />
@@ -138,6 +141,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:text="Button"
+        android:onClick="second"
         android:visibility="invisible"
         app:layout_constraintEnd_toStartOf="@+id/btn3"
         app:layout_constraintStart_toEndOf="@+id/btn1"
@@ -149,17 +153,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="24dp"
+        android:onClick='third'
         android:text="Enter"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv3" />
 
     <Button
-        android:id="@+id/anotherGame"
+        android:id="@+id/Enter"
         android:layout_width="200dp"
         android:layout_height="80dp"
         android:layout_marginTop="40dp"
-        android:text="New"
+        android:onClick="anotherGame"
+        android:text="!!!Another Game!!!"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -171,6 +177,7 @@
         android:layout_height="80dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="60dp"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ed1"
         tools:srcCompat="@tools:sample/avatars" />
