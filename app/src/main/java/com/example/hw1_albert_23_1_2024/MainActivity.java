@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView iv1,iv2,iv3;
     Button btn1,btn2,btn3,anotherGame;
     Random rand = new Random();
-    int num =0,temp = 0,ans = 0,count = 0;
+    int num =0,temp = 0,sum =0,ans = 0,count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
         iv1.setVisibility(View.VISIBLE);
         tv3.setVisibility(View.VISIBLE);
         tv4.setVisibility(View.VISIBLE);
-        tv3.setText(""+ans);
+        sum = num+temp;
+        tv3.setText(""+sum);
         temp = rand.nextInt(89)+10;
         tv4.setText(""+temp);
         ed2.setVisibility(View.VISIBLE);
@@ -84,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         iv2.setVisibility(View.VISIBLE);
         tv5.setVisibility(View.VISIBLE);
         tv6.setVisibility(View.VISIBLE);
-        tv5.setText(""+num);
+        tv5.setText(""+(sum+temp));
         temp = rand.nextInt(89)+10;
         tv6.setText(""+temp);
         ed3.setVisibility(View.VISIBLE);
