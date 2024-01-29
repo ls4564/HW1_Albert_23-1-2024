@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
             iv3.setImageResource(R.drawable.img2_albert_23_1_24);
             count++;
         }
+        //
         else
         {
             iv3.setImageResource(R.drawable.img1_albert_23_1_24);
