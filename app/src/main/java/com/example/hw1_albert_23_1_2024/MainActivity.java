@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView iv1,iv2,iv3;
     Button btn1,btn2,btn3,anotherGame;
     Random rand = new Random();
-    int num =0,temp = 0,sum =0,ans = 0,count = 0;
+    int num =0,temp = 0,sum =0,ans = 0,dog = 0,bob =0,count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
         tv4.setVisibility(View.VISIBLE);
         sum = num+temp;
         tv3.setText(""+sum);
-        temp = rand.nextInt(89)+10;
-        tv4.setText(""+temp);
+        dog = rand.nextInt(89)+10;
+        tv4.setText(""+dog);
         ed2.setVisibility(View.VISIBLE);
         btn2.setVisibility(View.VISIBLE);
     }
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     public void second(View view) {
         String st = ed2.getText().toString();
         num = Integer.parseInt(st);
-        if(ans +temp ==num)
+        if(ans +dog ==num)
         {
             iv2.setImageResource(R.drawable.img2_albert_23_1_24);
             count++;
@@ -85,9 +85,9 @@ public class MainActivity extends AppCompatActivity {
         iv2.setVisibility(View.VISIBLE);
         tv5.setVisibility(View.VISIBLE);
         tv6.setVisibility(View.VISIBLE);
-        tv5.setText(""+(sum+temp));
-        temp = rand.nextInt(89)+10;
-        tv6.setText(""+temp);
+        tv5.setText(""+(sum+dog));
+        bob = rand.nextInt(89)+10;
+        tv6.setText(""+bob);
         ed3.setVisibility(View.VISIBLE);
         btn3.setVisibility(View.VISIBLE);
     }
