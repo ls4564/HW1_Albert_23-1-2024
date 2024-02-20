@@ -49,76 +49,73 @@ public class MainActivity extends AppCompatActivity {
 
     public void first(View view) {
         String st = ed1.getText().toString();
-        ans = Integer.parseInt(st);
-        if(num +temp ==ans)
+        if(!st.isEmpty())
         {
-            iv1.setImageResource(R.drawable.img2_albert_23_1_24);
-            count++;
+            ans = Integer.parseInt(st);
+            if (num + temp == ans) {
+                iv1.setImageResource(R.drawable.img2_albert_23_1_24);
+                count++;
+            } else {
+                iv1.setImageResource(R.drawable.img1_albert_23_1_24);
+            }
+            iv1.setVisibility(View.VISIBLE);
+            tv3.setVisibility(View.VISIBLE);
+            tv4.setVisibility(View.VISIBLE);
+            sum = num + temp;
+            tv3.setText("" + sum);
+            dog = rand.nextInt(89) + 10;
+            tv4.setText("" + dog);
+            ed2.setVisibility(View.VISIBLE);
+            btn2.setVisibility(View.VISIBLE);
         }
-        else
-        {
-            iv1.setImageResource(R.drawable.img1_albert_23_1_24);
-        }
-        iv1.setVisibility(View.VISIBLE);
-        tv3.setVisibility(View.VISIBLE);
-        tv4.setVisibility(View.VISIBLE);
-        sum = num+temp;
-        tv3.setText(""+sum);
-        dog = rand.nextInt(89)+10;
-        tv4.setText(""+dog);
-        ed2.setVisibility(View.VISIBLE);
-        btn2.setVisibility(View.VISIBLE);
     }
 
     public void second(View view) {
         String st = ed2.getText().toString();
-        num = Integer.parseInt(st);
-        if(ans +dog ==num)
-        {
-            iv2.setImageResource(R.drawable.img2_albert_23_1_24);
-            count++;
+        if(!st.isEmpty()) {
+            num = Integer.parseInt(st);
+            if (ans + dog == num) {
+                iv2.setImageResource(R.drawable.img2_albert_23_1_24);
+                count++;
+            } else {
+                iv2.setImageResource(R.drawable.img1_albert_23_1_24);
+            }
+            iv2.setVisibility(View.VISIBLE);
+            tv5.setVisibility(View.VISIBLE);
+            tv6.setVisibility(View.VISIBLE);
+            tv5.setText("" + (sum + dog));
+            bob = rand.nextInt(89) + 10;
+            tv6.setText("" + bob);
+            ed3.setVisibility(View.VISIBLE);
+            btn3.setVisibility(View.VISIBLE);
         }
-        else
-        {
-            iv2.setImageResource(R.drawable.img1_albert_23_1_24);
-        }
-        iv2.setVisibility(View.VISIBLE);
-        tv5.setVisibility(View.VISIBLE);
-        tv6.setVisibility(View.VISIBLE);
-        tv5.setText(""+(sum+dog));
-        bob = rand.nextInt(89)+10;
-        tv6.setText(""+bob);
-        ed3.setVisibility(View.VISIBLE);
-        btn3.setVisibility(View.VISIBLE);
     }
     public void third(View view) {
         String st = ed3.getText().toString();
-        ans = Integer.parseInt(st);
-        if(num +temp ==ans)
+        if(!st.isEmpty())
         {
-            iv3.setImageResource(R.drawable.img2_albert_23_1_24);
-            count++;
-        }
-
-        else
-        {
-            iv3.setImageResource(R.drawable.img1_albert_23_1_24);
-        }
-        iv3.setVisibility(View.VISIBLE);
-        switch (count)
-        {
-            case 0:
-                anotherGame.setText("(0% ,0/3)");
-                break;
-            case 1:
-                anotherGame.setText("(33% ,1/3)");
-                break;
-            case 2:
-                anotherGame.setText("(66% ,2/3)");
-                break;
-            case 3:
-                anotherGame.setText("(100% ,3/3)");
-                break;
+            ans = Integer.parseInt(st);
+            if (num + temp == ans) {
+                iv3.setImageResource(R.drawable.img2_albert_23_1_24);
+                count++;
+            } else {
+                iv3.setImageResource(R.drawable.img1_albert_23_1_24);
+            }
+            iv3.setVisibility(View.VISIBLE);
+            switch (count) {
+                case 0:
+                    anotherGame.setText("(0% ,0/3)");
+                    break;
+                case 1:
+                    anotherGame.setText("(33% ,1/3)");
+                    break;
+                case 2:
+                    anotherGame.setText("(66% ,2/3)");
+                    break;
+                case 3:
+                    anotherGame.setText("(100% ,3/3)");
+                    break;
+            }
         }
     }
 
