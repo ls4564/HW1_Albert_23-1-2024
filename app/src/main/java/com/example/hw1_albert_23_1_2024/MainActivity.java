@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView iv1,iv2,iv3;
     Button btn1,btn2,btn3,anotherGame;
     Random rand = new Random();
-    int num =0,temp = 0,sum =0,ans = 0,dog = 0,bob =0,count = 0;
+    int count = 0;
     int num1 = 0,num2 = 0,num3 = 0,num4 = 0,num5 = 0,num6 = 0;
     int ans1 = 0,ans2 = 0,ans3 = 0;
 
@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         if(!st.isEmpty())
         {
             ans1 = Integer.parseInt(st);
+            num3 = num1 + num2;
             if (num1 + num2 == ans1) {
                 iv1.setImageResource(R.drawable.img2_albert_23_1_24);
                 count++;
@@ -63,8 +64,7 @@ public class MainActivity extends AppCompatActivity {
             iv1.setVisibility(View.VISIBLE);
             tv3.setVisibility(View.VISIBLE);
             tv4.setVisibility(View.VISIBLE);
-            sum = num + temp;
-            tv4.setText("" + ans1);
+            tv3.setText("" + num3);
             num4 = rand.nextInt(89) + 10;
             tv4.setText("" + num4);
             ed2.setVisibility(View.VISIBLE);
@@ -76,7 +76,8 @@ public class MainActivity extends AppCompatActivity {
         String st = ed2.getText().toString();
         if(!st.isEmpty()) {
             ans2 = Integer.parseInt(st);
-            if (ans1 + num4 == ans2) {
+            num5 = num3 +num4;
+            if (ans3 + num4 == ans2) {
                 iv2.setImageResource(R.drawable.img2_albert_23_1_24);
                 count++;
             } else {
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             iv2.setVisibility(View.VISIBLE);
             tv5.setVisibility(View.VISIBLE);
             tv6.setVisibility(View.VISIBLE);
-            tv5.setText("" + ans2);
+            tv5.setText("" + num5);
             num6 = rand.nextInt(89) + 10;
             tv6.setText("" + num6);
             ed3.setVisibility(View.VISIBLE);
@@ -97,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         if(!st.isEmpty())
         {
             ans3 = Integer.parseInt(st);
-            if (ans2 + num6 == ans3) {
+            if (num5 + num6 == ans3) {
                 iv3.setImageResource(R.drawable.img2_albert_23_1_24);
                 count++;
             } else {
