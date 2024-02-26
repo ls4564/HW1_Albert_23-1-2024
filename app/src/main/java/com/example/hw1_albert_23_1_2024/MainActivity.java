@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     Button btn1,btn2,btn3,anotherGame;
     Random rand = new Random();
     int num =0,temp = 0,sum =0,ans = 0,dog = 0,bob =0,count = 0;
+    int num1 = 0,num2 = 0,num3 = 0,num4 = 0,num5 = 0,num6 = 0;
+    int ans1 = 0,ans2 = 0,ans3 = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +42,10 @@ public class MainActivity extends AppCompatActivity {
         ed2 = (EditText) findViewById(R.id.ed2);
         ed3 = (EditText) findViewById(R.id.ed3);
 
-        num = rand.nextInt(89)+10;
-        tv1.setText(""+num);
-        temp = rand.nextInt(89)+10;
-        tv2.setText(""+temp);
+        num1 = rand.nextInt(89)+10;
+        tv1.setText(""+num1);
+        num2 = rand.nextInt(89)+10;
+        tv2.setText(""+num2);
 
     }
 
@@ -51,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
         String st = ed1.getText().toString();
         if(!st.isEmpty())
         {
-            ans = Integer.parseInt(st);
-            if (num + temp == ans) {
+            ans1 = Integer.parseInt(st);
+            if (num1 + num2 == ans1) {
                 iv1.setImageResource(R.drawable.img2_albert_23_1_24);
                 count++;
             } else {
@@ -62,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
             tv3.setVisibility(View.VISIBLE);
             tv4.setVisibility(View.VISIBLE);
             sum = num + temp;
-            tv3.setText("" + sum);
-            dog = rand.nextInt(89) + 10;
-            tv4.setText("" + dog);
+            tv4.setText("" + ans1);
+            num4 = rand.nextInt(89) + 10;
+            tv4.setText("" + num4);
             ed2.setVisibility(View.VISIBLE);
             btn2.setVisibility(View.VISIBLE);
         }
@@ -73,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
     public void second(View view) {
         String st = ed2.getText().toString();
         if(!st.isEmpty()) {
-            num = Integer.parseInt(st);
-            if (ans + dog == num) {
+            ans2 = Integer.parseInt(st);
+            if (ans1 + num4 == ans2) {
                 iv2.setImageResource(R.drawable.img2_albert_23_1_24);
                 count++;
             } else {
@@ -83,9 +85,9 @@ public class MainActivity extends AppCompatActivity {
             iv2.setVisibility(View.VISIBLE);
             tv5.setVisibility(View.VISIBLE);
             tv6.setVisibility(View.VISIBLE);
-            tv5.setText("" + (sum + dog));
-            bob = rand.nextInt(89) + 10;
-            tv6.setText("" + bob);
+            tv5.setText("" + ans2);
+            num6 = rand.nextInt(89) + 10;
+            tv6.setText("" + num6);
             ed3.setVisibility(View.VISIBLE);
             btn3.setVisibility(View.VISIBLE);
         }
@@ -94,14 +96,15 @@ public class MainActivity extends AppCompatActivity {
         String st = ed3.getText().toString();
         if(!st.isEmpty())
         {
-            ans = Integer.parseInt(st);
-            if (num + temp == ans) {
+            ans3 = Integer.parseInt(st);
+            if (ans2 + num6 == ans3) {
                 iv3.setImageResource(R.drawable.img2_albert_23_1_24);
                 count++;
             } else {
                 iv3.setImageResource(R.drawable.img1_albert_23_1_24);
             }
             iv3.setVisibility(View.VISIBLE);
+            anotherGame.setVisibility(View.VISIBLE);
             switch (count) {
                 case 0:
                     anotherGame.setText("(0% ,0/3)");
@@ -136,13 +139,13 @@ public class MainActivity extends AppCompatActivity {
         ed1.setText("");
         ed2.setText("");
         ed3.setText("");
-
+        anotherGame.setVisibility(View.INVISIBLE);
         count = 0;
 
-        num = rand.nextInt(89)+10;
-        tv1.setText(""+num);
-        temp = rand.nextInt(89)+10;
-        tv2.setText(""+temp);
+        num1 = rand.nextInt(89)+10;
+        tv1.setText(""+num1);
+        num2 = rand.nextInt(89)+10;
+        tv2.setText(""+num2);
 
     }
 }
