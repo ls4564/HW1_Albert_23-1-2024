@@ -74,10 +74,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void second(View view) {
         String st = ed2.getText().toString();
-        if(!st.isEmpty()) {
+        if(!st.isEmpty())
+        {
             ans2 = Integer.parseInt(st);
-            num5 = num3 +num4;
-            if (ans3 + num4 == ans2) {
+            num5 = num4 + num3;
+            if (num3 + num4 == ans2) {
                 iv2.setImageResource(R.drawable.img2_albert_23_1_24);
                 count++;
             } else {
